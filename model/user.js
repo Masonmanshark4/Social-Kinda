@@ -5,7 +5,6 @@ const userSchema = new Schema({
     email: { type: String, required: true, match: [/.+@.+\..+/, 'Please enter a valid e-mail address']},
     thoughts: [{ type: Schema.Types.ObjectId, ref: 'Thought' }],
     friends: [{ type: Schema.Types.ObjectId, ref: 'User' }],
-    password: { type: String, required: true },
     toJSON: { virtuals: true },
     id: false,
 });
